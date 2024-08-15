@@ -23,7 +23,7 @@ class ProjectFactory extends Factory
             'status' => fake()->randomElement(['pending', 'in_progress', 'completed']),
             'image_path' => fake()->imageUrl(),
             'priority' => fake()->randomElement(['low', 'medium', 'high']),
-            'assigned_user_id' => 1, // Add this line
+            'assigned_user_id' => 1, 
             'created_by' => 1,
             'updated_by' => 1,
             'created_at' => now(),
