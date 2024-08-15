@@ -1,0 +1,21 @@
+import Authenticated from '@/Layouts/AuthenticatedLayout'
+import React from 'react'
+
+const Index = ({auth, projects}) => {
+  return (
+    <Authenticated user={Authenticated.user} header={ <h2 className="font-semibold text-xl text-gray-800 dark:gray-200 leading-tight"> Dashboard </h2>}>
+
+    <div className='py-12'>
+        <div className='max-w-7xl mx-auto sm:px-6 lg:px-8'>
+          <div className='bg-white dark:bg-gray'>
+            <div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+    </Authenticated>
+  )
+}
+
+export default Index
