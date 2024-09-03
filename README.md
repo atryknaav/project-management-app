@@ -1,66 +1,72 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Project Management App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Overview
 
-## About Laravel
+This project management application is built using Laravel, React, and Inertia.js. It allows users to manage projects and tasks, with features for creating, reading, editing, and deleting both projects and tasks. Users can also manage their own accounts through login, registration, and logout functionalities. The application supports image uploads for both tasks and projects.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### User Authentication
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Login**: Users can log into their accounts to access the application.
+- **Register**: New users can create an account to start using the application.
+- **Logout**: Users can log out of their accounts to secure their session.
 
-## Learning Laravel
+### Project Management
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Create Projects**: Users can create new projects by filling out a form, including uploading an image.
+- **Read Projects**: Users can view a list of projects and details of individual projects.
+- **Edit Projects**: Users can edit the details of existing projects and update the associated image.
+- **Delete Projects**: Users can delete projects, with images being removed from the storage.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Task Management
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Create Tasks**: Users can create tasks associated with specific projects, including uploading an image.
+- **Read Tasks**: Users can view a list of tasks and details of individual tasks.
+- **Edit Tasks**: Users can edit the details of existing tasks and update the associated image.
+- **Delete Tasks**: Users can delete tasks, with images being removed from the storage.
 
-## Laravel Sponsors
+### Dashboard
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- **Task Overview**: Users see an overview of their tasks, including counts of pending, in-progress, and completed tasks.
+- **Active Tasks**: Displays the most recent active tasks assigned to the user.
 
-### Premium Partners
+### Image Uploads
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+- **Project Image**: Users can upload images when creating or updating projects.
+- **Task Image**: Users can upload images when creating or updating tasks.
 
-## Contributing
+## Technologies Used
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **Laravel**
+- **React**
+- **Inertia.js**
+- **Storage**
 
-## Code of Conduct
+## Controllers and Resources
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Controllers
 
-## Security Vulnerabilities
+1. **ProjectController**: Manages CRUD operations for projects.
+2. **TaskController**: Manages CRUD operations for tasks.
+3. **UserController**: Manages CRUD operations for users.
+4. **DashboardController**: Provides task and project metrics on the dashboard.
+5. **ProfileController**: Manages user profile updates and account deletion.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Resources
 
-## License
+1. **ProjectResource**: Formats project data for API responses.
+2. **TaskResource**: Formats task data for API responses.
+3. **UserResource**: Formats user data for API responses.
+4. **UserCRUDResource**: Provides detailed user data including creation date.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Usage
+
+1. **Setup**: Clone the repository and install dependencies using Composer and npm.
+2. **Configuration**: Set up environment variables and database configuration.
+3. **Running the App**: Use Laravel’s built-in server or a local development server to run the application.
+4. **Accessing the App**: Navigate to the application URL in your browser to interact with the app.
+
+## Conclusion
+
+This project management application provides a comprehensive suite of features for managing projects and tasks, with robust user authentication and image upload capabilities. It leverages the power of Laravel, React, and Inertia.js to offer a modern and efficient user experience.
